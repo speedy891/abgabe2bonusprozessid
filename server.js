@@ -15,6 +15,6 @@ http.createServer(function (request, response) {
    else
    {
         // Send the response body as "Hello Cloud"
-        response.end(+pid); 
+        response.end(pid); 
    } 
 }).listen(process.env.PORT);
