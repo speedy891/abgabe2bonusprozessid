@@ -15,6 +15,6 @@ http.createServer(function (request, response) {
    else
    {
         // Send the response body as "Hello Cloud"
-        response.end('Wow, this was an awesome POST request!\n'); 
+        response.end('Process ID: '+pid2); 
    } 
 }).listen(process.env.PORT);
