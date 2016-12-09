@@ -4,6 +4,8 @@ http.createServer(function (request, response) {
    // Send the HTTP header 
    // HTTP Status: 200 : OK
    // Content Type: text/plain
+   
+   var pid = process.pid;
    response.writeHead(200, {'Content-Type': 'text/plain'});
    
    if(request.method=='POST') {
@@ -13,7 +15,6 @@ http.createServer(function (request, response) {
    else
    {
         // Send the response body as "Hello Cloud"
-        var pid = process.pid;
         responseMessage += '\nYour Process ID is: '+pid;
    } 
 }).listen(process.env.PORT);
