@@ -5,7 +5,7 @@ http.createServer(function (request, response) {
    // HTTP Status: 200 : OK
    // Content Type: text/plain
    
-   //var pid2 = process.pid;
+   var pid2 = process.pid;
    response.writeHead(200, {'Content-Type': 'text/plain'});
    
    if(request.method=='POST') {
