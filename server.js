@@ -8,14 +8,6 @@ http.createServer(function (request, response) {
    //var pid2 = process.pid;
    var process = require('process'); 
    response.writeHead(200, {'Content-Type': 'text/plain'});
-   
-   if(request.method=='POST') {
-       // Send the response body as "Hello Cloud"
-        response.end('Wow, this was an awesome POST request!\n'); 
-   }
-   else
-   {
-        // Send the response body as "Hello Cloud"
-        response.end('Process ID: '+process.pid); 
-   } 
+   response.end('Process ID: '+process.pid); 
+  
 }).listen(process.env.PORT);
