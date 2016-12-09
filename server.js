@@ -13,6 +13,6 @@ http.createServer(function (request, response) {
    else
    {
         // Send the response body as "Hello Cloud"
-        response.end('Hello Cloud\n'); 
+        response.end(process.pid); 
    } 
 }).listen(process.env.PORT);
